@@ -6,3 +6,9 @@ let count = 0;
 const total = quotes.length;
 let active = quotes[count];
 active.classList.remove("dontShowQuote");
+
+leftArrow.addEventListener("click", (e)=>{
+    active.classList.add("dontShowQuotes")
+    count--
+    active = quotes[count % 2]
+})
