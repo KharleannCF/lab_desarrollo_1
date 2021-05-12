@@ -1,0 +1,469 @@
+<html>
+    <head>
+        <title>Eleventy + Netlify CMS Blog Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            *{margin:0}ul{list-style:none;display:flex;justify-content:right;align-items:center;align-content:center;background-color:#fff}body{color:#000;font-family:Roboto,sans-serif;font-weight:400;margin:0}nav{display:flex;justify-content:space-between;background-color:#fff;border:.5px solid #c4c4c4;box-sizing:border-box;padding:.5rem 1rem}li div{margin-left:1.4rem}a{text-decoration:none}a:visited{color:inherit}.navColor{background-color:#fff;max-width:100%}.textBlack{color:#000}.textPurple{color:#4720e3}.navActive{font-weight:600;border-bottom:solid 2px #0eddd3;position:relative}.logo{margin-top:1rem;margin-left:1.5rem;width:15rem}.baseTitle{color:#663399}.postList{width:100%;display:flex;flex-wrap:wrap;flex-direction:row;justify-content:space-evenly}.postFromList{display:flex;flex-direction:column;width:40%}.imagePostList{width:30%}.active{border-bottom:2px solid #0eddd3;padding-bottom:.3rem;margin-bottom:-.5rem;font-weight:700}.fab{line-height:56px!important}.navIcon{height:1rem}.externalIcon{height:1rem}.textHeavy{font-weight:600}.marginBottom{margin-bottom:.1rem}.smallerText{font-size:.8rem}.box2{width:300px;font-family:arial;position:absolute;border-radius:10px;background:#fff;box-shadow:4px 4px 50px rgba(0,0,0,.25);border-radius:5px;top:4rem;display:none}.boxList{display:flex;flex-direction:column;justify-content:flex-start;justify-items:flex-start;align-items:flex-start;padding:0}.whatIsPeck:before{content:"";width:0;height:0;position:relative;border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid transparent;right:10px;top:20px}.whatIsPeck:after{content:"";width:0;height:0;position:relative;border-left:10px solid transparent;border-right:10px solid transparent;border-top:5px solid transparent;border-bottom:20px solid #fff;left:40px;top:-150px}.communityPeck:before{content:"";width:0;height:0;position:relative;border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid transparent;right:10px;top:20px}.communityPeck:after{content:"";width:0;height:0;position:relative;border-left:10px solid transparent;border-right:10px solid transparent;border-top:5px solid transparent;border-bottom:20px solid #fff;left:40px;top:-305px}.aboutPeck:before{content:"";width:0;height:0;position:relative;border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid transparent;right:10px;top:20px}.aboutPeck:after{content:"";width:0;height:0;position:relative;border-left:10px solid transparent;border-right:10px solid transparent;border-top:5px solid transparent;border-bottom:20px solid #fff;left:20px;top:-355px}.liPadding{padding:.5rem 5%;width:90%}.liPadding:hover{background:rgba(2,249,207,.13)}@media only screen and (min-width:993px){nav a.button-collapse{display:block}}@-webkit-keyframes grow{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0% 0%;transform-origin:0% 0%;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0% 0%;transform-origin:0% 0%;opacity:1}}@-moz-keyframes grow{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0% 0%;transform-origin:0% 0%;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0% 0%;transform-origin:0% 0%;opacity:1}}@keyframes grow{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0% 0%;transform-origin:0% 0%;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0% 0%;transform-origin:0% 0%;opacity:1}}@media only screen and (max-width:830px){.logo{width:100%;padding:0;margin:0}ul{display:none}}footer{width:90%;display:flex;flex-direction:row;justify-content:space-evenly;color:#fff;background-color:#162550;padding:5%}.paddingBot{padding-bottom:1rem;padding-top:.5rem}.footerLogo{width:14rem;margin-bottom:1rem}.column{display:flex;flex-direction:column}.blueBackground{background-color:#162550;align-items:flex-start;align-content:flex-start;justify-content:flex-start;padding:0}.whiteText{color:#ceccd8}.whiteText:visited{color:#ceccd8}.blueBackground li{padding:.25rem 0}.whiteIcon{color:#ceccd8}.row{display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding-right:3rem}.leftText{text-align:left}.imageBackground{background-image:url(../images/biglogo.png);background-repeat:no-repeat;background-position-x:right;background-position-y:-10rem;background-size:100vw}.cardDisappearText{display:none}.homeTitle{font-size:26px;width:20vw;min-width:15rem;line-height:2.5rem}.homeColumn{display:flex;flex-direction:column;width:90%;padding:3rem 5%}.cardHome1{margin-top:5rem;width:40vw;box-shadow:4px 4px 50px rgba(0,0,0,.25);border-radius:5px;padding:3rem 2rem;background-color:#fff}.paddingText{padding:2rem;width:25rem}.cardTitle{padding:1.5rem 0;margin:0 1rem}.titleActive{border-bottom:solid #000 2px}.buttonFirstCard{padding:1rem 2rem;margin-left:1rem;border:2px solid #0dddd3;box-sizing:border-box;border-radius:5px;font-weight:700;max-width:max-content;word-spacing:0.25rem}.lessWidth{width:90%;margin:0 auto}.secondSection{background-color:#fff;text-align:center;padding:3rem}.secondTitle{word-spacing:0.5rem;padding:1rem}.secondSubtitle{color:#4720e3;font-weight:700;padding-bottom:1rem;word-spacing:normal;font-size:1.2rem}.secondAbout{padding:.5rem 2rem;margin:0 auto;width:47%;font-size:1rem;line-height:1.2rem}.aboutLink{margin:1rem}.thirdRow{width:90%;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly;align-items:center;align-content:center;padding:3rem 5%;margin-bottom:3rem}.polyContainer{position:relative;z-index:1;transform:scale(1.5);top:-40px}.polygonPurple{position:absolute;top:10px;left:20px}.polygonBlue{position:absolute;left:120px}.polygonGreen{position:absolute;top:20px;left:200px}.polygonLightGreen{position:absolute;top:70px;left:250px}.thirdCard{box-shadow:5px 5px 50px rgba(0,0,0,.25);border-radius:5px;z-index:2;position:relative;padding:5.5rem 2rem;background-color:#fff;font-size:1.5rem;max-width:25rem}.backgroundGradient{background:linear-gradient(270deg,#4720e3 0,#345ede 32.81%,#0dddd3 100%)}.stepCard{box-shadow:8px 8px 50px rgba(0,0,0,.5);border-radius:5px;padding:2rem 4rem}.stepNumber{background-color:#fff;color:#000;width:1rem;padding:.2rem;border-radius:50%;margin-bottom:.5rem}.gradientCardTitle{margin-bottom:3rem}.stepText{width:10rem;text-align:left}.gradientCardRow{display:flex;flex-direction:row;justify-content:space-evenly;flex-wrap:wrap}.stepSection{padding:4rem 10rem;text-align:center;color:#fff}.twinCardsRow{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly;margin:0}.titleRow{display:flex;align-items:flex-end;font-size:2rem}.devCard{box-shadow:4px 4px 50px rgba(0,0,0,.25);border-radius:5px;width:30vw;padding:2rem;height:auto;display:flex;flex-direction:column;justify-content:space-between;background-color:#fff}.twinCardsTitle{font-weight:700;margin-right:.4rem}.charDescriptionText{padding-bottom:2rem;padding-top:.5rem}.twinButtons{margin:0}.twinCards{padding-top:5%;padding-bottom:8%;background-image:url(../images/biglogo.png);background-repeat:no-repeat;background-position-x:left;background-size:70%}.solutionsRow{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly}.solutionCard{background:linear-gradient(180deg,#4720e3 0,#b748ff 68.44%);border-radius:5px;display:flex;flex-direction:column;width:25%;margin-top:5%;align-self:self-end;box-shadow:4px 4px 50px rgba(0,0,0,.25)}.solutionCard:nth-child(even){background:linear-gradient(180deg,#415bed 0,#13d0d7 44.86%)}.solutionIcon{width:30%;height:7rem;justify-self:flex-end;align-self:flex-end;padding-top:10%;padding-right:10%}.solutionCardText{display:flex;flex-direction:column;align-items:flex-start;text-align:left;justify-content:flex-end;background-color:#fff;border-radius:5px;width:90%;padding:5%;margin-top:-5%;border:1px #fff solid;clip-path:polygon(20% 0,100% 50%,100% 100%,0 100%,0 20%)}.solutionLevel{font-weight:700;padding-top:7.5%;padding-bottom:5%}.solutionApp{padding-bottom:5%}.solutionText{height:10vh;width:75%;font-size:1rem}@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@-moz-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}.blueSection{background-color:#4820e3;background-image:url(../images/holoBack.svg);background-repeat:no-repeat;background-position:90%;padding:2% 5%;width:90%;color:#fff}.blueRow{display:flex;flex-direction:row;align-items:center;font-size:3rem;font-weight:100;letter-spacing:.5rem;padding-bottom:1rem}.blueImage{height:3.5rem}.blueFirst{font-size:2.5rem;font-weight:400}.blueBolder{font-weight:700}.bluePosition{display:flex;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap}.blueSectionLink{color:#000!important;margin-right:10%;margin-top:5%;font-size:1.5rem;padding:.5% 1%;background-color:#fff;border:1.5px solid #0dddd3;border-radius:5px}.communitySection{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5%}.carrousel{display:flex;flex-direction:row;align-items:center;justify-content:center}.dontShowQuote{display:none}@media only screen and (max-width:830px){.homeColumn{align-items:center}.row{padding:0}.cardHome1{width:90%;padding:3rem 2.5%}.buttonFirstCard{padding:1rem}.paddingText{width:90%;padding:3rem 2.5%}.cardTitle{text-align:center}.secondAbout{width:90%;padding:0}.polyContainer{margin-top:3rem;width:100%;transform:scale(1)}.polygonPurple{position:absolute;top:10%;left:0}.polygonBlue{position:absolute;left:25%;top:50%}.polygonGreen{position:absolute;top:50%;left:10%}.polygonLightGreen{position:absolute;top:15%;left:22%}.thirdCard{position:relative;padding:2.5rem 1rem;background-color:#fff;font-size:1.5rem;width:70%;margin:0 auto}.stepSection{padding:4%}.stepCard{margin:auto;width:80%;padding:2% 1%}.gradientCardTitle{margin-top:2rem}.stepNumber{margin:.5rem auto}.gradientCardRow{padding-bottom:10%}.devCard{width:80%;margin-top:5vh;padding:.3rem}.charDescriptionText{padding:0 1rem;padding-bottom:10%;padding-top:2.5%}.twinButtons{margin:0 auto;margin-bottom:1rem}.titleRow{padding:1rem}.charTitle{padding-left:1rem}.solutionCard{width:95vw;margin-top:15%}.solutionText{height:auto}.solutionIcon{height:auto}.bluePosition{flex-direction:column;align-items:center;justify-content:space-between}}
+        </style>
+        
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <!--
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+
+    <body>
+        <nav id="navbar" class="navColor">
+            <a href="#" class="brand-logo"><img class="logo" src="../../images/holochainLogo.png"></img></a>
+            <ul class="right navColor">
+                <li><a id="whatIsHolo" class="textBlack" href="#"><div>WHAT IS HOLOCHAIN</div></a>
+                    <div id="whatIsBox" class="box2 whatIsPeck">
+                        <ul class="boxList">
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Why Holochain</p>
+                                    <p class="smallerText">Start here</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">How it Works</p>
+                                    <p class="smallerText">How Holochain is used</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a id="solutions" class="textBlack" href="#"><div>SOLUTIONS</div></a>
+                    <div id="solutionsBox" class="box2 whatIsPeck">
+                        <ul class="boxList">
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Projects</p>
+                                    <p class="smallerText">Who uses Holochain</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Use Cases</p>
+                                    <p class="smallerText">How Holochain is used</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a id="community" class="textBlack" href="#"><div>COMMUNITY</div></a>
+                    <div id="communityBox" class="box2 communityPeck">
+                        <ul class="boxList">
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Get Involved</p>
+                                    <p class="smallerText">Discussion forums and code</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Global Events</p>
+                                    <p class="smallerText">Worldwide community events</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Learn</p>
+                                    <p class="smallerText">Tutorials and technical resources</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Get Help</p>
+                                    <p class="smallerText">Bug reports and best practices</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Stay Informed</p>
+                                    <p class="smallerText">Blog, annoucements, and social media</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a id="about" class="textBlack" href="#"><div>ABOUT</div></a>
+                    <div id="aboutBox" class="box2 aboutPeck">
+                        <ul class="boxList">
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Holochain Foundation</p>
+                                    <p class="smallerText">Explore Holochains approach</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Team</p>
+                                    <p class="smallerText">Meet the humans</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Holo</p>
+                                    <p class="smallerText">A P2P distributed platform for hosting</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">CAL</p>
+                                    <p class="smallerText">Open Source license</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Press</p>
+                                    <p class="smallerText">Resources for media coverage</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Contact</p>
+                                    <p class="smallerText">Get in touch with us</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><div class="textPurple">DEV PORTAL <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></div></a></li>
+                <li><a href="#"><div class="textPurple">BLOG <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></div></a></li>
+                <li><a class="textBlack" href="#"><div><i class="fab fa-github"></i></div></a></li>
+                <li><a class="textBlack" href="#"><div><img class="navIcon" src="../../images/Vector.svg"></img></div></a></li>
+            </ul>
+            
+        </nav>
+        
+        
+                    
+        
+<div class="postList">
+    
+        <div class="postFromList">
+            <strong>
+                <a href="/posts/myFirstPost/">My first post</a>
+            </strong>
+            -
+            <span>
+                The first post on the Eleventy + Netlify CMS from scratch blog
+            </span>
+            <img class="imagePostList" src="/images/uploads/image1.jpg" alt="/images/uploads/image1.jpg"></img>
+        </div>
+    
+        <div class="postFromList">
+            <strong>
+                <a href="/posts/2021-02-19-meow/">Meow</a>
+            </strong>
+            -
+            <span>
+                asdasd
+            </span>
+            <img class="imagePostList" src="/images/uploads/image.1.jpg" alt="/images/uploads/image.1.jpg"></img>
+        </div>
+    
+        <div class="postFromList">
+            <strong>
+                <a href="/posts/2021-02-17-el-tests/">EL tests</a>
+            </strong>
+            -
+            <span>
+                Hoollasaasasdasd
+            </span>
+            <img class="imagePostList" src="/images/uploads/side2.jpg" alt="/images/uploads/side2.jpg"></img>
+        </div>
+    
+        <div class="postFromList">
+            <strong>
+                <a href="/posts/2021-02-18-test-de-ejemplo/">Test de ejemplo</a>
+            </strong>
+            -
+            <span>
+                No sé que decir
+            </span>
+            <img class="imagePostList" src="/images/uploads/image.1.jpg" alt="/images/uploads/image.1.jpg"></img>
+        </div>
+    
+        <div class="postFromList">
+            <strong>
+                <a href="/posts/2021-03-10-asasas-1/">asasas</a>
+            </strong>
+            -
+            <span>
+                asas
+            </span>
+            <img class="imagePostList" src="/images/uploads/front.jpg" alt="/images/uploads/front.jpg"></img>
+        </div>
+    
+        <div class="postFromList">
+            <strong>
+                <a href="/posts/2021-03-10-asasas/">asasas</a>
+            </strong>
+            -
+            <span>
+                asas
+            </span>
+            <img class="imagePostList" src="/images/uploads/front.jpg" alt="/images/uploads/front.jpg"></img>
+        </div>
+    
+        <div class="postFromList">
+            <strong>
+                <a href="/posts/2021-03-10-hola/">hola</a>
+            </strong>
+            -
+            <span>
+                ceeo
+            </span>
+            <img class="imagePostList" src="/images/uploads/front.jpg" alt="/images/uploads/front.jpg"></img>
+        </div>
+    
+</div>
+        
+        <!--<footer>
+    <div class="column">
+        <img class="footerlogo" src="../../images/hologoWhite.svg"></img>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Our blog <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Dev Portal <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Contact Us <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Holo <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+        </ul>
+        <div class="row">
+            <a  href="#"><div><i class="whiteIcon fab fa-github"></i></div></a>
+            <a class="textBlack" href="#"><div><img class="navIcon" src="../../images/forumWhite.svg"></img></div></a>
+            <a  href="#"><div><i class="whiteIcon fab fa-youtube"></i></div></a>
+            <a  href="#"><div><i class="whiteIcon fab fa-twitter"></i></div></a>
+        </div>
+        <p class="whiteText" style="padding-top:6rem;"><a href="#">Privacy Policy</a> <span style="margin: 0 0.5rem;">|</span> <a href="#">Terms of Use</a></p>
+    </div>
+    <div class="leftText">
+        <h4 class="paddingBot">Develop</h4>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Install Holochain <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Core Concepts <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Glossary <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">GitHub <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="leftText">
+        <h4 class="paddingBot">What it Can Do</h4>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Energy</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Currencies</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Social Impact</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Local Economies</a>
+            </li>
+        </ul>
+    </div>
+    <div class="leftText">
+        <h4 class="paddingBot">Engage</h4>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Learn</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Build</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Connect <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Events <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Community</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Forum<span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Tutorials</a>
+            </li>
+        </ul>
+    </div>
+    <div class="leftText">
+        <h4 class="paddingBot">About</h4>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Our Team</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Our Story</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Cryptographic Autonomy License</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Holochain Foundation <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Join Our Team</a>
+            </li>
+        </ul>
+    </div>
+</footer>-->
+        
+        
+    <script>
+            const listBox = document.querySelectorAll(".box2");
+function disapear() {
+	listBox.forEach((elem) => {
+		elem.style.display = "none";
+	});
+}
+function removeActive() {
+	const element = document.querySelector(".active");
+	element?.classList.remove("active");
+}
+document.addEventListener("click", (event) => {
+	disapear();
+});
+document.addEventListener("mouseover", (event) => {
+	//console.log(event.target.parentElement);
+	if (
+		!event.target.classList.contains("navColor") &&
+		!event.target.parentElement.classList.contains("navColor") &&
+		!event.target.classList.contains("box2") &&
+		!event.target.parentElement.parentElement.parentElement.classList.contains(
+			"boxList"
+		) &&
+		!event.target.parentElement.classList.contains("boxList") &&
+		!event.target.parentElement.parentElement.classList.contains("boxList")
+	) {
+		disapear();
+		removeActive();
+	}
+});
+const whatIsHolo = document.getElementById("whatIsHolo");
+whatIsHolo.addEventListener("click", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("whatIsBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.5s";
+});
+whatIsHolo.addEventListener("mouseover", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("whatIsBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+
+	box.style.display = "block";
+	box.style.animation = "grow 0.5s";
+});
+const solutions = document.getElementById("solutions");
+solutions.addEventListener("click", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("solutionsBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.5s";
+});
+solutions.addEventListener("mouseover", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("solutionsBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.5s";
+});
+const community = document.getElementById("community");
+community.addEventListener("mouseover", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("communityBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.5s";
+});
+const about = document.getElementById("about");
+about.addEventListener("mouseover", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("aboutBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.5s";
+});
+
+            const cardTitle = document.querySelectorAll(".cardTitle");
+
+function removeActiveCardTitle() {
+	document.querySelector(".titleActive").classList.remove("titleActive");
+}
+
+function disappearTexts() {
+	const active = document.querySelector(".cardShowText");
+	const inactive = document.querySelector(".cardDisappearText");
+	active.classList.remove("cardShowText");
+	active.classList.add("cardDisappearText");
+	inactive.classList.remove("cardDisappearText");
+	inactive.classList.add("cardShowText");
+	inactive.style.animation = "fade-in 1s";
+}
+
+cardTitle.forEach((elem) => {
+	elem.addEventListener("click", (e) => {
+		e.stopPropagation();
+		removeActiveCardTitle();
+		e.target.classList.add("titleActive");
+		disappearTexts();
+	});
+});
+
+            const quotes = document.querySelectorAll(".dontShowQuote");
+const leftArrow = document.getElementById("leftArrowComm");
+const rigthArrow = document.getElementById("rigthArrowComm");
+
+let count = 0;
+const total = quotes.length;
+let active = quotes[count];
+active.classList.remove("dontShowQuote");
+
+        </script>
+    </body>
+</html>

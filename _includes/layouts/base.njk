@@ -1,0 +1,20 @@
+<html>
+    {% include "components/_head.njk" %}
+
+    <body>
+        {% include "components/_navbar.njk" %}
+        
+        
+                    
+        {{ content | safe }}
+        
+        <!--{% include "components/_footer.njk" %}-->
+        
+        {% set js %}
+            {% include "js/navbar.js" %}
+            {% include "js/homeCard.js" %}
+            {% include "js/carrouselComm.js" %}
+        {% endset %}
+    <script>{{ js | safe }}</script>
+    </body>
+</html>

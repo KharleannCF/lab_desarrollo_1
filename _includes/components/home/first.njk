@@ -1,0 +1,28 @@
+{% for texts in textsHome %}
+<div class="imageBackground">
+    <div class="homeColumn">
+        <h2 class="homeTitle">An end-to-end open source P2P app framework</h2>
+        <div class="cardHome1">
+            <ul class="row">
+                <li id="T&S" class="cardTitle">
+                    Trust & Security
+                </li>
+                <li id="BB" class="cardTitle titleActive">
+                    Beyond Blockchain
+                </li>
+            </ul>
+            <hr/>
+            <div class="paddingText cardDisappear cardShowText">
+                {{texts.data.beyond}}
+            </div>
+            <div class="paddingText cardDisappear cardDisappearText">
+                {{texts.data.trust}}
+            </div>
+            <a href="#" class="buttonFirstCard">
+                Get Started with Holochain
+            </a>
+        </div>
+    </div>
+    <hr class="lessWidth"/>
+</div>
+{% endfor %}

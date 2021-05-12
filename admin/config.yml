@@ -1,0 +1,61 @@
+backend:
+    name: git-gateway
+    branch: master
+media_folder: "_site/images/uploads"
+public_folder: "/images/uploads"
+collections:
+    - name: "textsHome"
+      label: "TextsHome"
+      folder: "home"
+      slug: "{{slug}}"
+      fields:
+          - { label: "Trust and security", name: "trust", widget: "string" }
+          - { label: "Beyond blockchain", name: "beyond", widget: "string" }
+          - { label: "Why Holochain", name: "whyHolochain", widget: "text" }
+    - name: "howItWorks"
+      label: "Steps"
+      folder: "home/howItWorks"
+      create: true
+      slug: "{{slug}}"
+      fields:
+          - { label: "New steps", name: "step", widget: "string" }
+    - name: "devCards"
+      label: "Dev cards"
+      folder: "home/devCards"
+      create: true
+      slug: "{{slug}}"
+      fields:
+          - { label: "Title of the card", name: "title", widget: "string"}
+          - { label: "First charasteristic title", name: "charTitle1", widget: "string"}
+          - { label: "First charasteristic description", name: "charDescrip1", widget: "string"}
+          - { label: "Second charasteristic title", name: "charTitle2", widget: "string"}
+          - { label: "Second charasteristic description", name: "charDescrip2", widget: "string"}
+          - { label: "Third charasteristic title", name: "charTitle3", widget: "string"}
+          - { label: "Third charasteristic description", name: "charDescrip3", widget: "string"}
+    - name: "solutions"
+      label: "Solutions"
+      folder: "home/solutions"
+      create: true
+      slug: "{{slug}}"
+      fields:
+          - { label: "Level", name: "level", widget: "string" }
+          - { label: "Application type", name: "appType", widget: "string" }
+          - { label: "Description", name: "text", widget: "string" }
+          - { label: "Image", name: "icon", widget: "image" }
+    - name: "posts"
+      label: "Posts"
+      folder: "posts"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      fields:
+          - {
+                label: "Layout",
+                name: "layout",
+                widget: "hidden",
+                default: "layouts/post.njk",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Date", name: "date", widget: "date", default: "" }
+          - { label: "Post Body", name: "body", widget: "markdown" }
+          - { label: "Featured Image", name: "featuredImage", widget: "image" }

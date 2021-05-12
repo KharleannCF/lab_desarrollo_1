@@ -1,0 +1,22 @@
+<div class="twinCards">
+    <div class="twinCardsRow">    
+        {% for card in devsCards %}
+        <div class="devCard">
+            <span class="titleRow">
+                <p class="twinCardsTitle">{{card.data.title}} </p>
+                <p> Devs</p>
+            </span>
+            <h3 class="charTitle">{{card.data.charTitle1}}</h3>
+            <p class="charDescriptionText">{{card.data.charDescrip1}}</p>
+            <h3 class="charTitle">{{card.data.charTitle2}}</h3>
+            <p class="charDescriptionText">{{card.data.charDescrip2}}</p>
+            <h3 class="charTitle">{{card.data.charTitle3}}</h3>
+            <p class="charDescriptionText">{{card.data.charDescrip3}}</p>
+            <a href="#" class="buttonFirstCard twinButtons">
+                Get Started with Holochain
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<hr class="lessWidth"/>

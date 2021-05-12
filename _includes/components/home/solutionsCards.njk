@@ -1,0 +1,18 @@
+<div class="secondSection">
+    <h2 class="secondTitle">Solutions to Common Distributed App Problems </h2>
+    <p class="">Simple step-by-step walkthroughs to solve common distributed app problems with Holochain</p>
+    <div class="solutionsRow">
+        {% for solution in solutionCards %}
+            <div class="solutionCard">
+                
+            <img class="solutionIcon" src="{{ solution.data.icon | url }}" alt="{{ solution.data.icon }}"></img>
+            
+            <div class="solutionCardText">
+                <p class="solutionLevel">{{solution.data.level}}</p>
+                <h4 class="solutionApp">{{solution.data.appType}}</h4>
+                <p class="solutionText">{{solution.data.text}}</p>
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

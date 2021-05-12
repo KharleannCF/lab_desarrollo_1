@@ -1,0 +1,11 @@
+{% for text in textsHome %}
+<div class="secondSection">
+    <h2 class="secondTitle">Why Holochain? </h2>
+    <h4 class="secondSubtitle">Because the world needs a reboot</h4>
+    <p class="secondAbout">
+        {{text.data.whyHolochain}}
+    </p>
+    <p class="aboutLink"><a href="#">About <i class='fas fa-arrow-right'></i></a></p>
+</div>
+<hr class="lessWidth"/>
+{% endfor %}
