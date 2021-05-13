@@ -1,9 +1,9 @@
 ---
 title: Equipo
-charTitle1: Configurable
-charDescrip1: You choose your own terms. Set privileges, governance policies, and consensus rules according to your needs. 
-charTitle2: Scalable
-charDescrip2: Fast, cheap, and truly peer-to-peer compute and data. No processing fees or block confirmation waits. 
-charTitle3: Forkable
-charDescrip3: Interate to perfect. Hard forks aren’t governance crises but opportunities to play a new game.   
+charTitle1: David Kaller
+charDescrip1: "Venezolano, estudiante de Ciencias de la Computación en la 'Universidad Central de Venezuela' UCV, programador web con conocimientos de HTML, CSS, JavaScript, Ruby on Rails, C++, C, React Js, React Native, VueJs, MySQL, Php, Angular y PosgreSQL.
+Aficionado al desarrollo y diseño de videojuegos con conocimientos de OpenGL y Game Maker Studio.
+Aficionado al diseño y creación de sprites en PixelArt." 
+charTitle2: Daniel Da Costa
+charDescrip2: Llevo trabajando 4 años como desarrollador web freelance y siempre estoy abierto a nuevos retos. 
 ---

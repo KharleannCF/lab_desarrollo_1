@@ -3,19 +3,30 @@
     <div class="twinCardsRow">    
         {% for card in devsCards %}
         <div class="devCard">
-            <span class="titleRow">
-                <p class="twinCardsTitle">{{card.data.title}} </p>
+            <span class="titleRow" style="margin-bottom:2rem;">
+                <p class="twinCardsTitle" >{{card.data.title}} </p>
                 <p> Devs</p>
             </span>
             <h3 class="charTitle">{{card.data.charTitle1}}</h3>
             <p class="charDescriptionText">{{card.data.charDescrip1}}</p>
+            <div style="display:flex; justify-content:space-evenly; margin-bottom:1rem;">
+            <a href="#" class="buttonFirstCard twinButtons">
+                LinkedIn
+            </a>
+            <a href="#" class="buttonFirstCard twinButtons">
+                GitHub
+            </a>
+            </div>
             <h3 class="charTitle">{{card.data.charTitle2}}</h3>
             <p class="charDescriptionText">{{card.data.charDescrip2}}</p>
-            <h3 class="charTitle">{{card.data.charTitle3}}</h3>
-            <p class="charDescriptionText">{{card.data.charDescrip3}}</p>
+            <div style="display:flex; justify-content:space-evenly;">
             <a href="#" class="buttonFirstCard twinButtons">
-                Get Started with Holochain
+                LinkedIn
             </a>
+            <a href="#" class="buttonFirstCard twinButtons">
+                Github
+            </a>
+            </div>
         </div>
         {% endfor %}
     </div>
