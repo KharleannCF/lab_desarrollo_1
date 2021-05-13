@@ -1,5 +1,5 @@
 ---
-title: App
+title: Equipo
 charTitle1: Serverless
 charDescrip1: The community is the infrastructure. Scale with popularity of your app.
 charTitle2: Connectable

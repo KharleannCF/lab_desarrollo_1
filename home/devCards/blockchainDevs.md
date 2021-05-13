@@ -1,5 +1,5 @@
 ---
-title: Blockchain
+title: Equipo
 charTitle1: Configurable
 charDescrip1: You choose your own terms. Set privileges, governance policies, and consensus rules according to your needs. 
 charTitle2: Scalable
