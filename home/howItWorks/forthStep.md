@@ -1,3 +1,3 @@
 ---
-step: Cryptographic signing and peer validation guarantees integrity without a central server
+step: Te entregamos tus sueños en páginas y aplicaciónes, siempre a la vanguardía
 ---

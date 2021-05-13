@@ -1,3 +1,3 @@
 ---
-step: Users write and cryptographically sign data in their device's journal
+step: Descubrimos juntos las ideas que nuestros clientes traen
 ---

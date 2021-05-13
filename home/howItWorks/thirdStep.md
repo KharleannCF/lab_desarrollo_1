@@ -1,3 +1,3 @@
 ---
-step: Random select peers validate and store copies of the data
+step: Este paso es secreto, nuestros magos no nos dicen como hacen realidad tus sueños
 ---

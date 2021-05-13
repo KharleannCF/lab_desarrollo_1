@@ -1,3 +1,3 @@
 ---
-step: Users send their public data to a shared database, hosted by their peers
+step: Identificamos el máximo potencial de tu idea y evaluamos su viabilidad y potencial de negocio
 ---
