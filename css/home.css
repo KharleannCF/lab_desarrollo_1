@@ -1,8 +1,8 @@
 .imageBackground {
-	background-image: url(../images/biglogo.png);
+	background-image: url(../images/My-Post.png);
 	background-repeat: no-repeat;
 	background-position-x: right;
-	background-position-y: -10rem;
+	background-position-y: -20rem;
 	background-size: 100vw;
 }
 .cardDisappearText {
