@@ -214,10 +214,8 @@
 .twinCards {
 	padding-top: 5%;
 	padding-bottom: 8%;
-	background-image: url(../images/biglogo.png);
-	background-repeat: no-repeat;
-	background-position-x: left;
-	background-size: 70%;
+	background-image: url(../images/bigLogo.jpg);
+	background-size: cover;
 }
 
 .solutionsRow {
