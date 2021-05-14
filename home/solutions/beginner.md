@@ -1,6 +1,6 @@
 ---
-level: Beginner
-appType: Elemental Chat App
-text: Users send their public data to a shared database, hosted by their peers.
+level: De forma amigable
+appType: AARDAKHA TECH
+text: Marco la diferencia en el desarrollo de software de manera amigable para el ambiente.
 icon: /images/uploads/chatApp.png
 ---

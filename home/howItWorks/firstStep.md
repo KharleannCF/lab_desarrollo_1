@@ -1,3 +1,3 @@
 ---
-step: Descubrimos juntos las ideas que nuestros clientes traen
+step: Descubrimos juntos las ideas que nuestros clientes traen.
 ---
